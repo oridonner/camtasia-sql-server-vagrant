@@ -1,0 +1,23 @@
+Vagrantfile
+----------------
+
+The first and most important thing to set is the VagrantBox. 
+Vagrant uses a base image to clone a virtual machine. 
+These base images are known as boxes.These boxes are saved on a global repository named Atlas ,and are available for all Vagrant users. 
+
+Let's Google "Atlas boxes" and get inside Atlas repository.
+
+Now, let's search for our vagrant box - "SQL server vnext".
+Bingo! It is saved under the sqldevops namespace.  
+
+To get more detailed information about the box and VM get inside the box's repository.
+ 
+
+Back to our Vagrantfile,
+Vagrant manages a local repository of vagrant boxes,
+when a vagrantfile requests a vagrant box not listed in the local repo, 
+vagrant downloads it from the global Atlas repository, to the local repo. This can be a bit time consuming.
+
+The next thing to set on the vagrantfile is the network configurations.We will set the server on a local network with this IP, more network configurations are available on vagrant documentation.
+
+Now everything is ready for spinning up the VM.

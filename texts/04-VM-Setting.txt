@@ -1,0 +1,16 @@
+Configuration settings
+-------------------------------
+Now after all the required tools are installed, we can start setting the virtual machine:
+
+1. Create a new directory; I will name it "mssql-vnext" as the servers name.
+
+2. Get inside the new directory.
+
+3. Type vagrant init, and hit enter.
+A Vagrantfile was added to our new directory. The Vagrantfile is a configuration file written in the Ruby language. We will discuss this file later on. 
+
+4. Open the Vagrantfile with your favorite text editor and delete the file content. 
+
+5. Go to my blog post "3 good reasons for starting SQL Server vNext", scroll down to the "Vagrant box" paragraph and copy this code to the Vagrantfile. Don't forget to save the file. 
+
+Now, lets have a closer look on the Vagrantfile.

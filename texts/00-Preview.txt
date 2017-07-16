@@ -1,0 +1,3 @@
+Preview
+----------------------
+Hi, this is Ori Donner from SQL DevOps DOT tech, where SQL Server and OpenSource converge. 

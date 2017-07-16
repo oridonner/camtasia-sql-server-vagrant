@@ -1,0 +1,24 @@
+Installations
+---------------------------
+Now let's move on to the practical part.
+
+We will do all are downloads with the help of Chocolatey - Windows package manager; 
+
+If you haven't used Chocolatey before, go to chocolatey.org, click on  the "install chocolatey now" button 
+
+(don't worry, nothing will be downloaded to your PC, it is just a link to the installation web page).
+
+1. Open PowerShell Command Line Interface, as administrator, 2. Copy the PowerShell installation script from chocolatey installation web page to your shell.
+3. Hit Enter.
+4. If this is your first installation, you will have to reopen the Shell.
+
+Since Chocolatey is already installed on my PC I will continue to VirtualBox and Vagrant installations; 
+
+This step is quite straightforward: 
+1. choco install VirtualBox 
+2. choco install Vagrant
+3. Again, if this is your first installation, you will have to restart your PC. Since Vagrant and VirtualBox are already installed on my PC, I will skip the restart. 
+
+Now let's check if the installation has succeeded. 
+1. Type VirtualBox in the Shell and hit enter - VirtualBox application will be opened.
+2. Type Vagrant in the Shell and hit enter -Vagrant help will be scripted out. Since Vagrant is a command line tool, and It has no GUI. 

@@ -1,0 +1,15 @@
+Introduction
+------------------
+In this video, I will show you a fast, and easy way to build, 
+a resource affordable SQL Server Dev Environment on your PC.
+
+If you are a SQL Server DBA, 
+tired of asking the IT manager for more Dev resources, 
+or if you just want to work offline.
+
+Even if you are a SQL Server newbie, 
+eager to build your first Dev Lab, 
+you got to the right place!
+
+
+The content of this video is documented on my blog. 

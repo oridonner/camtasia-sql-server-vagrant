@@ -1,0 +1,92 @@
+Hi, this is Ori Donner from SQL DevOps DOT tech, where SQL Server and OpenSource converge. 
+
+In this video, I will show you a fast, and easy way to build, 
+a resource affordable SQL Server Dev Environment on your PC.
+If you are a SQL Server DBA, tired of asking the IT manager for more Dev resources, or if you just want to work offline;
+Even if you are a SQL Server newbie,eager to build your first Dev Lab, you got to the right place!
+The content of this video is documented on my blog. The link to the relevant post appears below.
+
+As the headline of this YouTube video extradites, we are going to install SQL Server on a local virtual machine; 
+Sounds quite tedious and weary, right? Well, I promise to surprise.
+This is our Windows Operating System PC, On this PC we will install VirtualBox.
+Next, we will install Vagrant, a command line tool, which manages VirtualBox.
+Finally, we will download a VagrantBox image for our VirtualBox.
+And here comes the surprise! This is a Vagrant box image of SQL Server vNext running on Linux Ubuntu.
+You probably ask yourself if you have heard right? Running SQL Server vNext on Windows!?
+Well, trying to manually download Windows Server and SQL Server images for your VM will take hours;
+Installing and spinning up even one machine will be time-consuming, and resource exhausting for your PC.
+Ironically, with SQL Server vNext, running on Linux, this is not the case; 
+The initial download of the required VagrnatBox image from SQL DevOps repository takes approximately 20 minutes. 
+Spinning up one VM on a PC with SSD takes about 40 sec, and even running multiple VM's is resource affordable. 
+
+Now let's move on to the practical part.We will do all are downloads with the help of Chocolatey - Windows package manager; 
+If you haven't used Chocolatey before, go to chocolatey.org, click on  the "install chocolatey now" button.
+Don't worry, nothing will be downloaded to your PC! It is just a link to the installation web page.
+
+Open PowerShell Command Line Interface, as administrator. Copy the PowerShell installation script from chocolatey installation web page to your shell.Hit Enter.
+If this is your first installation, you will have to reopen the Shell.
+Since Chocolatey is already installed on my PC I will continue to VirtualBox and Vagrant installations; 
+This step is quite straightforward: 
+choco install VirtualBox 
+choco install Vagrant
+Again, if this is your first installation, you will have to restart your PC. Since Vagrant and VirtualBox are already installed on my PC, 
+I will skip the restart. Now let's check if the installation has succeeded. 
+Type VirtualBox in the Shell and hit enter - VirtualBox application will be opened.
+Type Vagrant in the Shell and hit enter -Vagrant help will be scripted out. Since Vagrant is a command line tool, and It has no GUI. 
+
+Now after all the required tools are installed, we can start setting the virtual machine:
+Create a new directory; I will name it "mssql-vnext" as the servers name.
+Get inside the new directory.
+Type vagrant init, and hit enter.
+A Vagrantfile was added to our new directory. The Vagrantfile is a configuration file written in the Ruby language. We will discuss this file later. 
+Open the Vagrantfile with your favorite text editor and delete the file content. 
+Go to my blog post "3 good reasons for starting SQL Server vNext", scroll down to the "Vagrant box" paragraph and copy this code to the Vagrantfile. Don't Now, everything is up and ready for spinning up the virtual machine.
+
+
+The first and most important thing to set is the VagrantBox. 
+Vagrant uses a base image to clone a virtual machine. 
+These base images are known as boxes.These boxes are saved on a global repository named Atlas ,and are available for all Vagrant users. 
+
+Let's Google "Atlas boxes" and get inside Atlas repository.
+
+Now, let's search for our vagrant box - "SQL server vnext".
+Bingo! It is saved under the sqldevops namespace.  
+
+To get more detailed information about the box and VM get inside the box's repository.
+ 
+
+Back to our Vagrantfile,
+Vagrant manages a local repository of vagrant boxes,
+when a vagrantfile requests a vagrant box not listed in the local repo, 
+vagrant downloads it from the global Atlas repository, to the local repo. This can be a bit time consuming.
+
+The next thing to set on the vagrantfile is the network configurations.We will set the server on a local network with this IP, more network configurations are available on vagrant documentation.
+
+Now everything is ready for spinning up the VM.
+
+
+We will go back to the shell.
+
+Inside the "mssql-vnext" directory, type vagrant up - hit enter, 
+and wait until the virtual machine will be up and running.
+
+
+You can access the server in 2 ways:
+via the command line : type vagrant ssh. 
+
+via SSMS:
+
+The server name is the IP of the server as defined in the Vagrantfile.
+Use SQL Server authentication , user:sa and password: vnext@2017
+
+
+Thank you for watching this video,
+share your thoughts and coments below.
+If you find the content of this video helpfull, share this video and give us a like.
+for further updates push the subscribe button.
+
+
+
+
+
+

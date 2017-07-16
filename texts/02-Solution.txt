@@ -1,0 +1,33 @@
+
+Solution architecture
+-----------------------------
+As the headline of this YouTube video extradites, we are going to install SQL Server on a local virtual machine; Sounds quite tedious and weary, right?
+Well, I promise to surprise.
+
+This is our Windows Operating System PC,
+
+On this PC we will install VirtualBox.
+
+Next, we will install Vagrant, a command line tool, which manages VirtualBox.
+
+Finally, we will download a VagrantBox image for our VirtualBox; 
+
+And here comes the surprise!
+This is a Vagrant box image of SQL Server vNext running on Linux Ubuntu.
+
+You probably ask yourself if you have heard right?
+Running SQL Server vNext on Windows!?
+
+Well, trying to manually download Windows Server and SQL Server images for your VM will take hours; Installing and spinning up even one machine will be time-consuming, and resource exhausting for your PC.
+
+Ironically, with SQL Server vNext, running on Linux, this is not the case; 
+
+The initial download of the required VagrnatBox image from SQL DevOps repository takes approximately 20 minutes. 
+
+Spinning up one VM on a PC with SSD takes about 40 sec, 
+
+and even running multiple VM's is resource affordable. 
+
+
+
+
